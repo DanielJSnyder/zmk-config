@@ -2,10 +2,7 @@
 
 #include "split34.dtsi"
 
-kscan0 : kscan {
-    compatible = "zmk,kscan-gpio-matrix"
-    label = "KSCAN"
-    diode-direction = "col2row"
+&kscan0 {
     col-gpios
         = <&pro_micro 1 GPIO_ACTIVE_HIGH> // col0
 	, <&pro_micro 0 GPIO_ACTIVE_HIGH> // col1

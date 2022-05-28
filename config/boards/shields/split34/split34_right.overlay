@@ -6,10 +6,7 @@
   col-offset = <6>
 }
 
-kscan0 : kscan {
-    compatible = "zmk,kscan-gpio-matrix"
-    label = "KSCAN"
-    diode-direction = "col2row"
+&kscan0 {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH> // col7
 	, <&pro_micro 16 GPIO_ACTIVE_HIGH> // col8
@@ -26,5 +23,4 @@ kscan0 : kscan {
         , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row3 (row8 in schematic)
         , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row4 (row9 in schematic)
 	;
-
 };
