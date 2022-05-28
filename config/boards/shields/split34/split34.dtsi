@@ -22,6 +22,7 @@ default_transform: keymap_transform_0 {
 	                                   RC(3,5) RC(3,6) RC(3,12) RC(3,13)
 					   RC(4,5) RC(4,6) RC(4,12) RC(4,13)
    >;
+};
 
    kscan0: kscan {
      compatible = "zmk,kscan-gpio-matrix";
