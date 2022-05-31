@@ -1,23 +1,30 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEFAULT 0
+#define NUMBER 1
+
 / {
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
-      // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      // |    Z    |    X    |    C    |    V    |    G    |                                          |    B    |    F    |    Y    |    W    |    Q    |
-      // |    K    |    O    |    R    |    E    |    M    |                                          |    H    |    A    |    I    |    T    |    J    |
-      //           |    D    |    L    |    N    |                                                              |    S    |    U    |    P    | 
-      //                                                   | LSHIFT  |  BKSP   |   |  RALT  |  SPACE  | 
-      //                                                   |  TAB    |  LCTRL  |   |  ENTER |  RSHIFT | 
       bindings = <
 	&kp Z    &kp X    &kp C    &kp V     &kp G                                                  &kp B     &kp F     &kp Y     &kp W     &kp Q    
 	&kp K    &kp O    &kp R    &kp E     &kp M                                                  &kp H     &kp A     &kp I     &kp T     &kp J 
 		 &kp D    &kp L    &kp N          						              &kp S     &kp U     &kp P
-		                        		&kp LSHIFT   &kp BKSP	&kp RALT  &kp SPACE        
-		                        		&kp TAB      &kp LCTRL	&kp ENTER &kp RSHIFT        
+		                        		&kp LALT     &kp BKSP	&kp RSHIFT  &kp SPACE        
+		                        		&kp TAB      &kp LCTRL	&kp ENTER   &to NUMBER        
+	>;
+    };
+
+    number_layer {
+      bindings = <
+	&kp 1    &kp 2    &kp 3    &kp 4     &kp 5                                                  &kp 6     &kp 7     &kp 8     &kp 9     &kp 0    
+	&kp -    &kp [    &kp {    &kp (     &kp =                                                  &kp ESC   &kp PG_UP &kp \     &kp /     &kp ; 
+		 &kp ]    &kp }    &kp )          						              &kp PG_DN &kp ,     &kp .
+		                        		&kp LEFT   &kp DOWN  &kp RSHIFT  &kp ESC        
+		                        		&kp RIGHT  &kp UP    &kp RGUI    &to DEFAULT        
 	>;
     };
   };
