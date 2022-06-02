@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define NUMBER 1
+#defaine NUMBER 1
 
 / {
   keymap {
@@ -10,9 +10,9 @@
 
     default_layer {
       bindings = <
-	&kp Z    &kp X    &kp C    &kp V     &kp G                                                  &kp B     &kp F     &kp Y     &kp W     &kp Q    
-	&kp K    &kp O    &kp R    &kp E     &kp M                                                  &kp H     &kp A     &kp I     &kp T     &kp J 
-		 &kp D    &kp L    &kp N          						              &kp S     &kp U     &kp P
+	&kp X    &kp K    &kp V    &kp C     &kp Z                                                  &kp Q     &kp F     &kp Y     &kp W     &kp J    
+	&kp D    &kp O    &kp R    &kp E     &kp M                                                  &kp B     &kp A     &kp I     &kp T     &kp S 
+		 &kp G    &kp L    &kp N          						              &kp U     &kp H     &kp P
 		                        		&kp LSHIFT   &kp SPACE 	&to NUMBER  &kp BKSP        
 		                        		&kp TAB      &kp ENTER	&kp RCTRL   &kp RALT
 	>;
