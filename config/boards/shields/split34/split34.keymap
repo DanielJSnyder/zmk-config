@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#defaine NUMBER 1
+#define NUMBER 1
 
 / {
   keymap {
